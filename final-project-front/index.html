@@ -42,11 +42,11 @@
 
     <!-- kakao map -->
     <script>
-      window.Kakao?.init("8084269e80aa7bddaac7aae0b01aca02");
+      window.Kakao?.init(`${process.env.VUE_APP_API_KEY_MAP;}`);
     </script>
     <script
       type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8084269e80aa7bddaac7aae0b01aca02&libraries=services"
+      src=`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.VUE_APP_API_KEY_MAP}&libraries=services`
     ></script>
 
     <div id="app"></div>
