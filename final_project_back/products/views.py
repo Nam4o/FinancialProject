@@ -11,6 +11,7 @@ from accounts.serializers import CustomUserDetailsSerializer
 from django.contrib.auth import get_user_model
 from django.db.models import Count, Max
 
+import os
 
 from django.db.models import Q
 
@@ -18,7 +19,7 @@ from django.db.models import Q
 
 @api_view(['GET'])
 def temp(request):
-    api_key = "f6d469a35ac51357c3e810f371a30641"
+    api_key = os.getenv('API_KEY')
     url = f'http://finlife.fss.or.kr/finlifeapi/'
     
     params = {
@@ -36,7 +37,7 @@ def temp(request):
 
 @api_view(['GET'])
 def save_data(request):
-    api_key = "f6d469a35ac51357c3e810f371a30641"
+    api_key = os.getenv('API_KEY')
     url = f'http://finlife.fss.or.kr/finlifeapi/'
     
     params = {
